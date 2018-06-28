@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The Independent | Online Edition</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.js"></script>
+        <script>
+            $(document).ready(function (e) {
+                var newsNum = $(".bbb li").length;
+                //console.log(newsNum);   
+                var totalNews_w = 0;
+
+                for (var i = 0; i < newsNum; i++) {
+                    var news_w = $(".bbb li").eq(i).outerWidth(true);
+                    totalNews_w = totalNews_w + news_w;
+                }
+                //console.log(totalNews_w);
+                $(".bbb").css('width', totalNews_w + 'px');
+
+                var speed = 1;
+                animateNews();
+
+                animateNews();
+                function animateNews() {
+                    $(".bbb li").eq(0).animate({
+                        'marginleft': '-=' + speed + 'px'
+                    }, 1, function () {
+                        var animnews_w = $(this).outerWidth(true);
+                        if (speed >= animnews_w) {
+                            $(this).parent().append($(this));
+                            $(this).removeAttr('style');
+                        }
+                        ;
+                        animInterval = setTimeout(function () {
+                            animateNews();
+                        });
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <hr/>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Tuesday 22 May 2018 ,3:32:15 pm</p>
+                </div>
+                <div class="col-lg-6">                   
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn active"> <button class="btn btn-default" type="button">Search</button></span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row" style="height: 20px;">
+                <div class="col-lg-10">
+                    <img src="picture/main_logo.gif"/>
+                </div>
+                <!--<div class="col-lg-5 bg-danger">2</div>-->
+                <div class="col-lg-2 bgc">
+                    <img src="picture/cordination.png" style="margin-bottom: 13px;"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 media-list menu">
+                    <div class="col-lg-1 btn-lg"><li><a href="index.html">Home</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="politics.html">Politics</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="bangladesh.html">Bangla</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">News</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Business</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Sports</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Media</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Art</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Science</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Travel</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Metro</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Opinion</a></li></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 but"><button class="btn btn-success btn-group-justified" type="button">Latest News</button></div>
+                <div class="col-lg-10 marqu">
+                    <marquee direction="top">
+                     <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    </marquee>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="picture/sweden.jpg" height="290" width="780"/>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-lg-offset-1 col-lg-11" style="height: 5px; background: red"></div>
+                    <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red; text-align: center">
+                        <h4>Todays Print Edition</h4>
+                    </div>
+                    <div class="col-lg-offset-1 col-lg-11" style="background: gray; height: 15px; margin-top: 5px"></div>
+                    <div class="col-lg-offset-1 col-lg-11" style="margin-top: 5px">
+                        <img src="picture/2991.jpg" height="210" width="280"/>
+                    </div>
+                    <div class="col-lg-offset-1 col-lg-11" style="background: gray; height: 15px; margin-top: 5px"></div>
+                </div>
+            </div>
+            <div class="row" style="float: left;">
+                <div class="col-lg-8">
+
+                    <div class="col-lg-3">
+                        <img src="picture/Digital-Security6.jpg" height="130" width="200"/>                       
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="picture/Biodiversity-Day.jpg" height="130" width="200"/>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="picture/asaduzzaman321.jpg" height="130" width="200"/>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="picture/gun.gif" height="130" width="200"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" style="margin-top: 10px">
+                            <div class="col-lg-4">
+                                <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                <div class="col-lg-12 bg-success" style="color: red;">
+                                    <h4><b>At a Glance</b></h4>
+                                </div>
+                                <div class="col-lg-12" style="overflow-y: scroll; height: 300px;">
+                                    <div class="col-lg-12">
+                                        <li><a href="#">Canada sets fresh strategy to respond to Rohingya crisis</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Five cops hurt in drug peddlers' attack in Pabna </a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                        <li><a href="#">Priyanka calls for world’s attention on Rohingya children</a></li>
+                                        <div class="saperator-lin">.....................................</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                <div class="col-lg-12" style="color: red; background: lightgray;">
+                                    <h4><b>Bangladesh</b></h4>
+                                </div>
+                                <div class="" style="color: #005580; font-size: 18px;"><a href="#">KCC polls not fully free, fair says Shujon.</a></div>
+                                <div class="col-lg-6">
+                                    <img class="pull-left" style="width: 230px" src="picture/Khulna-city-polls11.jpg"/>                                    
+                                </div>
+                                <div class="col-lg-6 pull-right">
+                                    <p style="margin-left: 5px">Shushashoner Jonno Nagorik (Shujan) yesterday said that the recently held Khulna City Corporation (KCC) elections were not completely free and fair, reports…</p> 
+                                </div>
+                                <div class="saperator-lin">..........................................................................................................................</div>
+                                <div class="" style="color: #005580; font-size: 18px;">Stillborn baby rescued from dustbin in Ctg hospital </div>
+                                <div class="col-lg-6">
+                                    <img class="pull-left" style="width: 230px" src="picture/Ctg10.jpg"/>                                    
+                                </div>
+                                <div class="col-lg-6 pull-right">
+                                    <p style="margin-left: 5px">Shushashoner Jonno Nagorik (Shujan) yesterday said that the recently held Khulna City Corporation (KCC) elections were not completely free and fair, reports…</p> 
+                                </div>
+                                <div class="saperator-lin">..........................................................................................................................</div>
+                                <ul><li><a href="#">Anti-Narcotic drive: 11 more killed in ‘shootouts’ </a></li>
+                                    <li><a href="#">CNG stations to remain open for 24 hrs during Eid: Quader  </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" style="margin-top:0px">
+                            <div class="col-lg-4">
+                                <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                <div class="col-lg-12 bg-success" style="color: red;">
+                                    <h4><b>World News</b></h4>
+                                </div>
+                                <div class="" style="color: #005580; font-size: 18px;">16 killed, 38 wounded in Afghan blast  </div>
+                                <div class="col-lg-6">
+                                    <img class="pull-left" style="width: 110px; height: 100px" src="picture/Afghan-blast1.jpg"/>                                    
+                                </div>
+                                <div class="col-lg-6 pull-right">
+                                    <p style="margin-left: 5px">KANDAHAR: At least 16 people were killed and 38 wounded yesterday  </p> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12" style="color: #005580; font-size: 18px;">Summit with Kim may be delayed: Trump</div>
+                                    <div class="col-lg-6" >
+                                        <img class="pull-left" style="width: 110px; height: 100px" src="picture/Trump-Korean-President.jpg"/>                                    
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p style="margin-left: 5px">US President Donald Trump has said there is a "very substantial chance"…</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12" style="color: #005580; font-size: 18px;">Seminal American novelist Philip Roth dead at 85</div>
+                                    <div class="col-lg-6" >
+                                        <img class="pull-left" style="width: 110px; height: 100px" src="picture/American-novelist-Philip-Roth-dies.jpg"/>                                    
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p style="margin-left: 5px">Grand man of American letters Philip Roth, a fierce and prolific talent who achieved…"…</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12" style="color: #005580; font-size: 18px;">Reader's FavouriteNo progress over Teesta deal, indicates FM</div>
+                                    <div class="col-lg-6" >
+                                        <img class="pull-left" style="width: 110px; height: 100px" src="picture/FM-on-tessta.jpg"/>                                    
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p style="margin-left: 5px">Grand man of American letters Philip Roth, a fierce and prolific talent who achieved…"…</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                    <div class="col-lg-12 bg-success" style="color: red;">
+                                        <h4><b>Metro</b></h4>
+                                    </div>
+                                    <div class="" style="color: #005580; font-size: 18px;">‘Meena Bazar’ fined Tk 2 lakh in anti-adulteration drive</div>
+                                    <div class="col-lg-6">
+                                        <img class="pull-left" style="width: 110px; height: 100px" src="picture/Mina-bazzar21.jpg"/>                                    
+                                    </div>
+                                    <div class="col-lg-6 pull-right">
+                                        <p style="margin-left: 5px">A Dhaka Metropolitan Police (DMP) mobile court fined superstore.</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12" style="color: #005580; font-size: 18px;">1.08 lakh yaba seized in Cox’sBazar</div>
+                                    <div class="col-lg-6" >
+                                        <img class="pull-left" style="width: 110px; height: 100px" src="picture/Yaba-arrest3.jpg"/>                                    
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p style="margin-left: 5px">Members of Rapid Action Battalion (RAB) in a drive arrested 10  people</p> 
+                                    </div>
+                                </div>
+                                <div class="saperator-lin">.........................................................</div>
+                                <ul><li><a href="#"><small>Road crash kills five in Bogura</small></a></li>
+                                    <li><a href="#"><small>Mastermind held over killing ATM booth security guard</small></a></li>
+                                    <li><a href="#"><small>City commuters suffer as rain causes waterlogging</small></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                <div class="col-lg-12" style="color: red; background: lightgray;">
+                                    <h4><b>Politics</b></h4>
+                                </div>
+                                <div class="" style="color: #005580; font-size: 18px;"><a href="#">KCC polls not fully free, fair says Shujon.</a></div>
+                                <div class="col-lg-6">
+                                    <img class="pull-left" style="width: 230px" src="picture/Rizvi65.jpg"/>                                    
+                                </div>
+                                <div class="col-lg-6 pull-right">
+                                    <p style="margin-left: 5px">Shushashoner Jonno Nagorik (Shujan) yesterday said that the recently held Khulna City Corporation (KCC) elections were not completely free and fair, reports…</p> 
+                                </div>
+                                <div class="saperator-lin">..........................................................................................................................</div>
+                                <div class="" style="color: #005580; font-size: 18px;">Stillborn baby rescued from dustbin in Ctg hospital </div>
+                                <div class="col-lg-6">
+                                    <img class="pull-left" style="width: 230px" src="picture/Shujan-.jpg"/>                                    
+                                </div>
+                                <div class="col-lg-6 pull-right">
+                                    <p style="margin-left: 5px">Shushashoner Jonno Nagorik (Shujan) yesterday said that the recently held Khulna City Corporation (KCC) elections were not completely free and fair, reports…</p> 
+                                </div>
+                                <div class="saperator-lin">..........................................................................................................................</div>
+                                <ul><li><a href="#">KCC polls not fully free, fair, says Shujan</a></li>
+                                    <li><a href="#">Anti-narcotics drive to be used against BNP men:Rizvi</a></li>
+                                </ul>
+                                <div class="row" style="margin-left: 10px;">
+                                    <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                    <div class="col-lg-12" style="color: red; background: lightgray;">
+                                        <h4><b>Sports</b></h4>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <img class="pull-left" style="width: 230px" src="picture/ABD1.jpg"/> 
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p>
+                                            <h5><b>AB de Villiers retires from international cricket</b></h5>
+                                            <small>South Africa batsman AB de Villiers has retired from international cricket, via a sudden announcement four days after completing another IPL…</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <img class="" style="width: 207px" src="picture/BCB-President-Nazmul-Hassan21.jpg"/> 
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="" style="width: 207px" src="picture/pogba-umrah.jpg"/> 
+                                        </div>
+                                    </div>
+                                    <div class="saperator-lin">.....................................................................................................................</div>
+                                    <ul><li><a href="#">Argentina goalkeeper Romero out of World Cup with knee injury</a></li>
+                                        <li><a href="#">World Cup fever causes sleepless nights for Bangladesh flagmakers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row" style="margin-left: 10px; margin-top: 20px">
+                                    <div class="col-lg-12" style="height: 5px; background: red"></div>
+                                    <div class="col-lg-12" style="color: red; background: lightgray;">
+                                        <h4><b>Business</b></h4>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <img class="pull-left" style="width: 230px" src="picture/NBR-2.jpg"/> 
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p><h5><b>NBR launches 'LTU-VAT Mobile App'…</b></h5></p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="pull-left" style="width: 230px" src="picture/ICSB-urges-NBR1.jpg"/> 
+                                            <h5><b>ICSB urges NBR to reduce individual…</b></h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <img class="" style="width: 207px" src="picture/Padma-Bridge-Rail-Link2.jpg"/> 
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <ul>
+                                                <li><a href="#">Project gets costlier by Tk 4257.94 cr</a></li>
+                                                <li><a href="#">FBCCI for proper banking support to investors</a></li>
+                                                <li><a href="#">Sony buys EMI Music Publishing in $1.9bn deal</a></li>
+                                                <li><a href="#">FBCCI for proper banking support to investors</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="saperator-lin">.....................................................................................................................</div>
+                                    <ul>
+                                        <li><a href="#">Mastermind held over killing ATM booth security guard</a></li>
+                                        <li><a href="#">City commuters suffer as rain causes waterlogging</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" style="height: 100px; float: right">
+                    <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 5px ">
+                        <h4><b>In Focus</b></h4>
+                    </div>                   
+                    <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px">
+                        <img src="picture/Ctg10.jpg" height="210" width="280"/>                       
+                    </div>
+                    <div class="col-lg-offset-1 col-lg-11" style="background: lightgray; text-align: center;color: blue">
+                        <p><strong>Stillborn baby rescued from dustbin in Ctg hospital</strong></p>
+                    </div>
+
+                    <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 5px ">
+                        <h4><b>Poll</b></h4>
+                    </div> 
+                    <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px">
+                        <h4>Today's Question»</h4>
+                        <p>
+                            Civil rights body Shujan claims that Khulna city elections were a questionable election, which was not completely free, fair and flawless. Do you agree? 
+                        </p>
+                        Yes <input type="radio" name="radio" value="Yes"/>
+                        NO <input type="radio" name="radio" value="No"/>
+                        Commenr <input type="radio" name="radio" value="Comment"/><br/>
+                        <button class="btn btn-block-sm pull-left bg-primary" style="background: black;color: white">Vote</button>
+                        <button class="btn btn-block-sm pull-left bg-danger" style="background: black;color: white">All Result</button><br/>
+                    </div>
+                    <div class="row" >
+                        <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 80px ">
+                            <h4><b>Opinion</b></h4>
+                            <div class="media text-left" style="background: lightgray">
+                                <a href="#" class="pull-left">
+                                    <img src="picture/38.jpg" class="media-object" height="60px" width="60px"/>
+                                </a>
+                                <div class="media-body">
+                                    <p class="muted">Mohammad Abul Kalam. Phd<br/></p>
+                                    <a>The new era of title and digital techology</a>
+                                </div>
+                            </div>
+                            <div class="media text-left" style="background: lightgray">
+                                <a href="#" class="pull-left">
+                                    <img src="picture/25.jpg" class="media-object" height="60px" width="60px"/>
+                                </a>
+                                <div class="media-body">
+                                    <p class="muted">Saidur Rahman<br/></p>
+                                    <a>Belal Chowdhury : A modern-day baul</a>
+                                </div>
+                            </div>
+                            <div class="media text-left" style="background: lightgray">
+                                <a href="#" class="pull-left">
+                                    <img src="picture/121.jpg" class="media-object" height="60px" width="60px"/>
+                                </a>
+                                <div class="media-body">
+                                    <p class="muted">Professor Sarwar Md. Saifullah Khaled <br/></p>
+                                    <a>Diversification of jute export destinations needed</a>
+                                </div>
+                            </div>
+                            <div class="media text-left" style="background: lightgray">
+                                <a href="#" class="pull-left">
+                                    <img src="picture/Alamgir5.jpg" class="media-object" height="60px" width="60px"/>
+                                </a>
+                                <div class="media-body">
+                                    <p class="muted">Mirza Fakhrul Islam Alamgir  <br/></p>
+                                    <a>Killing people in crossfires in the name of anti-narcotics drive can't take place in a civilised</a>
+                                </div>
+                            </div>
+                            <div class="media text-left" style="background: lightgray">
+                                <a href="#" class="pull-left">
+                                    <img src="picture/Rizvi-241.jpg" class="media-object" height="60px" width="60px"/>
+                                </a>
+                                <div class="media-body">
+                                    <p class="muted">BNP senior joint secretary general Ruhul…<br/></p>
+                                    <a>BNP on Wednesday alleged that its chairperson Khaleda Zia is living in prison like in hell in an unhealthy condition amid sects and damp room of the abandoned Old Dhaka Central Jail.  </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-11 bg-danger" style="color: red; height: 15px;margin-top: 10px "></div>
+                        <div class="tabs-container">
+                            <ul class="tabs">
+                                <li>
+                                    <div class="tabs-selected">
+                                        <span><b>Most Viewed</b></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="pull-left">
+                                        <p class="muted">BNP senior joint secretary general Ruhul…<br/></p>
+                                        <img src="picture/School-banking1.jpg" class="media-object" height="60px" width="60px"/>
+                                        <ul type="list-unorderedd">
+                                            <li>World Cup 2018: Revealed squad so far</li>
+                                            <li>Meth trafficking in SE Asia 'alarming': UN </li>
+                                            <li>No progress over Teesta deal, indicates FM </li>
+                                            <li>Emery set to succeed Wenger as Arsenal bossr</li>
+                                        </ul>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>          
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-11" style="height: 5px; background: red"></div>
+                            <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 0px;">
+                                <h4><b>Editor's Choice</b></h4>
+                            </div>  
+                            <div class="col-lg-offset-1 col-lg-11" style=" text-align: center;color: blue">
+                                <p><strong>Media freedom must be guaranteed </strong></p>
+                            </div>
+                            <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px;">
+                                <img src="picture/Ctg10.jpg" height="210" width="280"/>                       
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px;">
+                            <div class="col-lg-offset-1 col-lg-11" style="height: 5px; background: red"></div>
+                            <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 0px ">
+                                <h4><b>Video</b></h4>
+                            </div>                              
+                            <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px;">
+                                <iframe src="https://www.youtube.com/embed/rhR7wtdcG9c "height="250" width="350" frameborder='1' allowfullscreen=""></iframe>                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Photo Gallary Start-->
+            <div class="col-lg-2" style="margin-top: 30px; background: lightgray; color: red;"><h4><b>Photo Gallery</b></h4></div>
+            <div class="col-lg-12" style="height: 5px; background: red;"></div>
+            <div class="col-lg-12">
+                <div class="col-lg-6" style="float: left; margin-top:5px;">
+                    <img src="picture/2335.jpg" height="340px;" width="537px;"/>
+                </div>
+                <div class="col-lg-6 " style="float: left;margin-top: 5px">
+                    <div class="col-lg-6">
+                        <img src="picture/2363-1.jpg" height="" width=""/>This recent photo shows some farm workers thrashing paddy at a village in Aditmari upazila…
+                        <img src="picture/2361-1.jpg" height="" width=""/>Vehicles ‘wade’ through water that submerged the VIP road near Fakirapool in the capital…
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="picture/2364-1.jpg" height="" width=""/>Waterlogging triggered by heavy rains of the past few days forces people to move by boat in…
+                        <img src="picture/2362-1.jpg" height="" width=""/>Despite a High Court ban motorcycles often invade the spaces of pedestrians like those in… 
+                    </div>
+                </div>
+            </div>
+            <!--Photo Gallary End-->
+
+            <!--- Environment, Art & Culture Start-->
+            <div class="row">
+                <div class="col-lg-12" style="height: 5px; margin-top: 30px; background: red;"></div>
+                <div class="col-lg-12" style="background: lightgray; color: red; height: 25px;font-size: 20px;"><b>Entertainment, Art & Culture</b></div>
+                <div class="col-lg-12">
+                    <div class="col-lg-6" style="float: left; margin-top:5px;">
+                        <img src="picture/Purnima111.jpg" height="340px;" width="537px;"/>
+                        <p><b> Purnima in, Badhan out<br/> </b>
+                            Popular actress Dilara Hanif Purnima is likely to return to the film industry with a new film ‘Dahan’ to be produced by Jazz Multimedia. She is going to replace actress Badhan for the female lead in the film, which will be directed by Raihan Rafi. Initially,…
+                        </p>
+                    </div>
+                    <div class="col-lg-2 " style="float: left;margin-top: 5px">
+                        <img src="picture/Apurba,-Monalisa1.jpg" height="" width=""/>
+                        <img src="picture/Ityadi17.jpg" height="" width=""/>
+                        <img src="picture/Tisha7.jpg" height="" width=""/>
+                        <img src="picture/Riaz-and-Jenny1.jpg" height="" width=""/>
+                    </div>
+                    <div class="col-lg-4" style="float: left;margin-top: 5px; font-size: 20px">
+                        <img src="picture/8th-SAARC-Film1.jpg" height="" width="108%"/> 
+                        <b>8th SAARC Film Festival kicks off in Colombo </b>
+                        <div class="media-list media-heading">
+                            <li>Shaon sings in Nachiketa’s composition for first time</li>
+                            <div>................................</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--- Environment, Art & Culture End-->
+
+            <!---Footer Start-->
+            <div class="col-lg-12" style="background: lightgray; margin-top: 30px; height: 300px;width: 100%">
+                <div class="row">
+                    <div class="col-lg-12 media-list " style="background: #000; margin-top: 5px; color: white; height: 35px;font-family: fantasy">
+                        <div class="col-lg-1 btn-lg"><li><a href="index.htm">Home</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="politics.html">Politics</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="bangladesh.html">Bangla</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">News</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Business</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Sports</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Media</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Art</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Science</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Travel</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Metro</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Opinion</a></li></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 footerl">
+                        <img src="picture/main_logo.gif" height="40"/>Copyright © All right reserved. 
+                    </div>
+                    <div class="col-lg-4 footerl">
+                        <p><strong>Editor : G.M. Mortoza Ahmed</strong></p>
+                        <address>
+                            Published by the Editor on behalf of Independent Publications Limited at Media Printers, 446/H, Tejgaon I/A, Dhaka-1215.
+                            Editorial, News & Commercial Offices : Beximco Media Complex, 149-150 Tejgaon I/A, Dhaka-1208, Bangladesh. GPO Box No. 934, Dhaka-1000.
+                        </address>
+                    </div>
+                    <div class="col-lg-2 footer">
+                        <div class="text-center">
+                            <a href="#">Disclaimer & Privacy Policy</a>
+                            <div>...........................</div>
+                            <a href="#">About Us</a>
+                            <div>...........................</div>
+                            <a href="#">Contact Us</a>
+                            <div>...........................</div>
+                            <a href="#">Advertisement</a>
+                            <div>...........................</div>
+                            <a href="#">Subscription</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 sicon text-center">
+                        <img src="picture/facebook.png" height="35px" width="35px;"/>
+                        <img src="picture/YouTube-icon-vector-free-download.png" height="35px" width="35px;"/>
+                        <img src="picture/google.jpg" height="35px" width="35px;"/>
+                        <img src="picture/twitter-icon-vector.png" height="35px" width="35px;"/>
+                        <img src="picture/facebook.png" height="35px" width="35px;"/>
+                        <img src="picture/images.png" height="35px" width="35px;"/><br/><br/><br/>
+                        <b>Powered by Frog Hosting</b>
+                    </div>
+                </div>
+            </div>
+            <!---Footer End-->
+
+        </div>
+    </body>
+</html>

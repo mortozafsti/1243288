@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The Independent | Online Edition</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.js"></script>
+        <script>
+            $(document).ready(function (e) {
+                var newsNum = $(".bbb li").length;
+                //console.log(newsNum);   
+                var totalNews_w = 0;
+
+                for (var i = 0; i < newsNum; i++) {
+                    var news_w = $(".bbb li").eq(i).outerWidth(true);
+                    totalNews_w = totalNews_w + news_w;
+                }
+                //console.log(totalNews_w);
+                $(".bbb").css('width', totalNews_w + 'px');
+
+                var speed = 1;
+                animateNews();
+
+                animateNews();
+                function animateNews() {
+                    $(".bbb li").eq(0).animate({
+                        'marginleft': '-=' + speed + 'px'
+                    }, 1, function () {
+                        var animnews_w = $(this).outerWidth(true);
+                        if (speed >= animnews_w) {
+                            $(this).parent().append($(this));
+                            $(this).removeAttr('style');
+                        }
+                        ;
+                        animInterval = setTimeout(function () {
+                            animateNews();
+                        });
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <hr/>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Tuesday 22 May 2018 ,3:32:15 pm</p>
+                </div>
+                <div class="col-lg-6">                   
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn active"> <button class="btn btn-default" type="button">Search</button></span>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row" style="height: 20px;">
+                <div class="col-lg-10">
+                    <img src="picture/main_logo.gif"/>
+                </div>
+                <div class="col-lg-2 bgc">
+                    <img src="picture/cordination.png" style="margin-bottom: 13px;"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 media-list menu">
+                    <div class="col-lg-1 btn-lg"><li><a href="index.html">Home</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="politics.html">Politics</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="bangladesh.html">Bangla</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">News</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Business</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Sports</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Media</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Art</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Science</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Travel</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Metro</a></li></div>
+                    <div class="col-lg-1 btn-lg"><li><a href="#">Opinion</a></li></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"><button class="btn btn-success btn-group-justified" type="button">Latest News</button></div>
+                <div class="col-lg-10 marqu">
+                    <marquee direction="top">
+                        <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                        <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                        <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                        <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                        <a>Lorem Ipsum dolor sit amet, consectetuer</a>
+                    </marquee>
+
+                </div>
+            </div>
+            <div class="row">
+                <!---Left Side Start-->
+                <div class="col-lg-8">
+                    <div class="col-lg-12">
+                        <hr/>
+                        <h3>Politics</h3>             
+                        <hr/>
+                        <p><h3 style="color: #269abc">Another warrant issued for Giasuddin Quader Chy’s arrest</h3></p>
+
+
+                        <div class="col-lg-6 pull-left">
+                            <img src="picture/Giasuddin-Quader-Chowdhury.jpg" height="210" width="300" />
+                        </div>
+                        <div class="col-lg-6 pull-right">
+                            <p style="text-align: justify">                          
+                                A Chattogram court on Sunday issued another arrest warrant against BNP leader Giasuddin Quader Chowdhury, also younger brother of executed war criminal Salauddin Quader Chowdhury, in a defamation case filed for making offensive remarks against Prime Minister Sheikh Hasina, reports UNB. Chattogram Chief Judicial Magistrate court Judge Md Shahidullah Kaisar issued the warrant. Md BelalUddin Shah, president of Bangladesh Torikat Federation of Fatikchhari…
+                            </p>
+                        </div>  
+                    </div>
+                    <!---Middle Body Part Start-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-6">
+                                <p><b>Narail Court denies khaleda bills plea</b></p>
+                                <img src="picture/1.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">A court here on Tuesday denied bail to BNP Chairperson Khaleda Zia in a case filed over her 'derogatory…</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>Mahila League leader found dead in Chandpur </b></p>
+                                <img src="picture/2.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">A court here on Tuesday denied bail to BNP Chairperson Khaleda Zia in a case filed over her 'derogatory…</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>Ex-Ctg BCL leader sent to jail in extortion case</b></p>
+                                <img src="picture/3.gif" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">A court in Chattogram on Monday sent ex-general secretary of Chittagong city unit of Bangladesh Chhatra </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>Habibun Nahar elected MP of Bagerhat-3 uncontested </b></p>
+                                <img src="picture/4.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">Awami League candidate Habibun Nahar has been elected MP uncontested from Bagerhat-3 constituency</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">  
+                                <p><b>Khaleda’s bail extended until June 28</b></p>
+                                <img src="picture/5.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">A Dhaka court on Monday extended the bail of BNP Chairperson Khaleda Zia until June 28 </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>BNP's polls joining depend on Khaleda's release</b></p>
+                                <img src="picture/6.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">BNP senior leader Nazrul Islam Khan on Sunday said their party’s participation in the </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>Another warrant issued for Giasuddin Quader Chy’s arrest</b></p>
+                                <img src="picture/7.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">A Chattogram court on Sunday issued another arrest warrant against BNP leader Giasuddin Quader </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <p><b>Fakhrul off to Bangkok for medical treatment</b></p>
+                                <img src="picture/8.jpg" />
+                                <div class="col-lg-6 pull-right">
+                                    <p style="text-align: justify">BNP secretary general Mirza Fakhrul Islam Alamgir on Sunday went to Bangkok for medical treatmen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---Middle Body Part End-->
+                </div>
+                <!---Left Side End-->
+                <!---Right Side Start-->
+                <div class="row" >
+                    <div class="col-lg-4" >
+                        <div class="col-lg-offset-1 col-lg-11" style="height: 5px; background: red"></div>
+                        <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red; text-align: center">
+                            <h4>Todays Print Edition</h4>
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-11" style="background: gray; height: 15px; margin-top: 5px"></div>
+                        <div class="col-lg-offset-1 col-lg-11" style="margin-top: 5px">
+                            <img src="picture/2991.jpg" height="210" width="280"/>
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-11" style="background: gray; height: 15px; margin-top: 5px"></div>
+                    </div>
+                    <div class="col-lg-4" style="height: 100px; float: right">
+                        <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 5px ">
+                            <h4><b>In Focus</b></h4>
+                        </div>                   
+                        <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px">
+                            <img src="picture/Ctg10.jpg" height="210" width="280"/>                       
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-11" style="background: lightgray; text-align: center;color: blue">
+                            <p><strong>Stillborn baby rescued from dustbin in Ctg hospital</strong></p>
+                        </div>
+
+                        <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 5px ">
+                            <h4><b>Poll</b></h4>
+                        </div> 
+                        <div class="col-lg-offset-1 col-lg-11" style="margin-top: 0px">
+                            <h4>Today's Question»</h4>
+                            <p>
+                                Civil rights body Shujan claims that Khulna city elections were a questionable election, which was not completely free, fair and flawless. Do you agree? 
+                            </p>
+                            Yes <input type="radio" name="radio" value="Yes"/>
+                            NO <input type="radio" name="radio" value="No"/>
+                            Commenr <input type="radio" name="radio" value="Comment"/><br/>
+                            <button class="btn btn-block-sm pull-left bg-primary" style="background: black;color: white">Vote</button>
+                            <button class="btn btn-block-sm pull-left bg-danger" style="background: black;color: white">All Result</button><br/>
+                        </div>
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 bg-success" style="color: red;margin-top: 80px ">
+                                <h4><b>Opinion</b></h4>
+                                <div class="media text-left" style="background: lightgray">
+                                    <a href="#" class="pull-left">
+                                        <img src="picture/38.jpg" class="media-object" height="60px" width="60px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <p class="muted">Mohammad Abul Kalam. Phd<br/></p>
+                                        <a>The new era of title and digital techology</a>
+                                    </div>
+                                </div>
+                                <div class="media text-left" style="background: lightgray">
+                                    <a href="#" class="pull-left">
+                                        <img src="picture/25.jpg" class="media-object" height="60px" width="60px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <p class="muted">Saidur Rahman<br/></p>
+                                        <a>Belal Chowdhury : A modern-day baul</a>
+                                    </div>
+                                </div>
+                                <div class="media text-left" style="background: lightgray">
+                                    <a href="#" class="pull-left">
+                                        <img src="picture/121.jpg" class="media-object" height="60px" width="60px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <p class="muted">Professor Sarwar Md. Saifullah Khaled <br/></p>
+                                        <a>Diversification of jute export destinations needed</a>
+                                    </div>
+                                </div>
+                                <div class="media text-left" style="background: lightgray">
+                                    <a href="#" class="pull-left">
+                                        <img src="picture/Alamgir5.jpg" class="media-object" height="60px" width="60px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <p class="muted">Mirza Fakhrul Islam Alamgir  <br/></p>
+                                        <a>Killing people in crossfires in the name of anti-narcotics drive can't take place in a civilised</a>
+                                    </div>
+                                </div>
+                                <div class="media text-left" style="background: lightgray">
+                                    <a href="#" class="pull-left">
+                                        <img src="picture/Rizvi-241.jpg" class="media-object" height="60px" width="60px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <p class="muted">BNP senior joint secretary general Ruhul…<br/></p>
+                                        <a>BNP on Wednesday alleged that its chairperson Khaleda Zia is living in prison like in hell in an unhealthy condition amid sects and damp room of the abandoned Old Dhaka Central Jail.  </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!---Right Side Start-->
+            </div>
+            <!---Footer Start-->
+            <div class="col-lg-12" style="background: lightgray; margin-top: 80px; height: 300px;width: 100%">
+                <div class="row">
+                    <div class="col-lg-12 media-list " style="background: #000; margin-top: 5px; color: white; height: 35px;font-family: fantasy">
+                        <div class="col-lg-1 btn-lg"><li><a href="index.html">Home</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="politics.html">Politics</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="bangladesh.html">Bangla</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">News</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Business</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Sports</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Media</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Art</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Science</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Travel</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Metro</a></li></div>
+                        <div class="col-lg-1 btn-lg"><li><a href="#">Opinion</a></li></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 footerl">
+                        <img src="picture/main_logo.gif" height="40"/>Copyright © All right reserved. 
+                    </div>
+                    <div class="col-lg-4 footerl">
+                        <p><strong>Editor : G.M. Mortoza Ahmed</strong></p>
+                        <address>
+                            Published by the Editor on behalf of Independent Publications Limited at Media Printers, 446/H, Tejgaon I/A, Dhaka-1215.
+                            Editorial, News & Commercial Offices : Beximco Media Complex, 149-150 Tejgaon I/A, Dhaka-1208, Bangladesh. GPO Box No. 934, Dhaka-1000.
+                        </address>
+                    </div>
+                    <div class="col-lg-2 footer">
+                        <div class="text-center">
+                            <a href="#">Disclaimer & Privacy Policy</a>
+                            <div>...........................</div>
+                            <a href="#">About Us</a>
+                            <div>...........................</div>
+                            <a href="#">Contact Us</a>
+                            <div>...........................</div>
+                            <a href="#">Advertisement</a>
+                            <div>...........................</div>
+                            <a href="#">Subscription</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 sicon text-center">
+                        <img src="picture/facebook.png" height="35px" width="35px;"/>
+                        <img src="picture/YouTube-icon-vector-free-download.png" height="35px" width="35px;"/>
+                        <img src="picture/google.jpg" height="35px" width="35px;"/>
+                        <img src="picture/twitter-icon-vector.png" height="35px" width="35px;"/>
+                        <img src="picture/facebook.png" height="35px" width="35px;"/>
+                        <img src="picture/images.png" height="35px" width="35px;"/><br/><br/><br/>
+                        <b>Powered by Frog Hosting</b>
+                    </div>
+                </div>
+            </div>
+            <!---Footer End-->
+
+        </div>
+    </body>
+</html>

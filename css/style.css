@@ -1,0 +1,21 @@
+
+.fff{
+    float: left;
+}
+.marqu a{
+    color: #000;
+}
+.menu{
+    background: grey;
+}
+.menu a{
+    color: black;
+    text-align: center;
+}
+.menu a:hover{
+    text-decoration: none;
+    color: white;
+}
+.but{
+    
+}
